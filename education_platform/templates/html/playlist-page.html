@@ -1,0 +1,45 @@
+{% extends 'html/index.html'%}
+{% load static %}
+{% block content %}
+<div class="container m-28 mx-auto flex flex-wrap items-start gap-4">
+  <!-- main video -->
+  <div class="px-5 pt-5 pb-3 flex-1 basis-[700px] rounded-lg bg-white">
+    <video class="w-full rounded-lg mb-2" src="{% static 'videos/car-mooving.mp4' %}" controls loop></video>
+    <h2 class="text-xl">Car Mooving</h2>
+  </div>
+  <!-- main video ended-->
+  <!-- video list -->
+  <ul
+    class="playlist-ul flex-1 basis-[350px] h-[500px] 2xl:h-[574px] overflow-y-scroll p-5 rounded-lg bg-white custom-scrollbar">
+    <li class="item-list active">
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+    <li>
+      <video src="{% static 'videos/car-mooving.mp4' %}"></video>
+      <h2>Car Mooving</h2>
+    </li>
+  </ul>
+  <!-- video list ended -->
+</div>
+{% endblock %}

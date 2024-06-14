@@ -1,0 +1,97 @@
+{% extends 'html/index.html' %}
+{% load static %}
+
+{% block navbar%}
+{% include 'html/code-parts/navbar.html'%}
+{% endblock %}
+
+{% block content %}
+
+<div class="flex flex-col items-center mx-auto max-w-6xl space-y-14">
+  <div class="text-center space-y-8 text-white mt-10">
+    <h1 class="text-5xl font-bold">Level Up Your Coding Skills</h1>
+    <p class="text-2xl text-gray-300 font-light">Whether you want to excel in web development,
+      mobile development or strenthen your <br> fundamental software engineering skills, there is a course for you
+    </p>
+  </div>
+  <div class="w-full pb-4 ">
+    <div class="md:flex mx-4">
+      <input
+        class="bg-[#12172b] border border-gray-600 outline-none w-full md:w-2/4 lg:w-1/3 h-11 rounded-md p-2 text-white placeholder:font-light placeholder:text-gray-500"
+        type="text" placeholder="Search">
+      <div
+        class="border rounded-md border-gray-600 bg-[#12172b] inline-flex items-center px-2 h-11 mt-3 md:mt-0 md:ml-4">
+        <p class="text-white mx-1 inline">All Courses </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- course cards  -->
+
+  <div class="grid grid-cols-1 md:grid-cols-2 md:px-4 lg:grid-cols-3 gap-8 my-10 max-w-sm sm:max-w-lg md:max-w-6xl">
+
+    <div
+      class="h-96 lg:max-w-[350px] max-w-80 rounded-lg transform transition duration-300 border  cursor-pointer bg-[#131729]  border-gray-700  hover:border-gray-600">
+      <a class="space-x-4 space-y-2" href="{% url 'playlist'%}">
+        <img class="rounded-t-lg" src="{% static 'icons/python-course-icon.webp'%}" alt="">
+        <div class="flex justify-between pt-4">
+          <h3 class="text-lg font-semibold text-white">Complete Python Mastery</h3>
+          <p class="px-3 py-1 mr-6 rounded-full  inline font-bold bg-gray-800 text-violet-400">12h</p>
+        </div>
+
+        <p class="text-gray-400 pr-6 pb-4">Everything you need to program in <br>python in one course (includes 3
+          real-world
+          project)
+        </p>
+      </a>
+    </div>
+    <div
+      class="h-96 lg:max-w-[350px] max-w-80 rounded-lg transform transition duration-300 border  cursor-pointer bg-[#131729]  border-gray-700  hover:border-gray-600">
+      <a class="space-x-4 space-y-2" href="#">
+        <img class="rounded-t-lg" src="{% static 'icons/python-course-icon.webp'%}" alt="">
+        <div class="flex justify-between pt-4">
+          <h3 class="text-lg font-semibold text-white">Complete Python Mastery</h3>
+          <p class="px-3 py-1 mr-6 rounded-full  inline font-bold bg-gray-800 text-violet-400">12h</p>
+        </div>
+
+        <p class="text-gray-400 pr-6 pb-4">Everything you need to program in <br>python in one course (includes 3
+          real-world
+          project)
+        </p>
+      </a>
+    </div>
+    <div
+      class="h-96 lg:max-w-[350px] max-w-80 rounded-lg transform transition duration-300 border  cursor-pointer bg-[#131729]  border-gray-700  hover:border-gray-600">
+      <a class="space-x-4 space-y-2" href="#">
+        <img class="rounded-t-lg" src="{% static 'icons/python-course-icon.webp'%}" alt="">
+        <div class="flex justify-between pt-4">
+          <h3 class="text-lg font-semibold text-white">Complete Python Mastery</h3>
+          <p class="px-3 py-1 mr-6 rounded-full  inline font-bold bg-gray-800 text-violet-400">12h</p>
+        </div>
+
+        <p class="text-gray-400 pr-6 pb-4">Everything you need to program in <br>python in one course (includes 3
+          real-world
+          project)
+        </p>
+      </a>
+    </div>
+    <div
+      class="h-96 lg:max-w-[350px] max-w-80 rounded-lg transform transition duration-300 border  cursor-pointer bg-[#131729]  border-gray-700  hover:border-gray-600">
+      <a class="space-x-4 space-y-2" href="#">
+        <img class="rounded-t-lg" src="{% static 'icons/python-course-icon.webp'%}" alt="">
+        <div class="flex justify-between pt-4">
+          <h3 class="text-lg font-semibold text-white">Complete Python Mastery</h3>
+          <p class="px-3 py-1 mr-6 rounded-full  inline font-bold bg-gray-800 text-violet-400">12h</p>
+        </div>
+
+        <p class="text-gray-400 pr-6 pb-4">Everything you need to program in <br>python in one course (includes 3
+          real-world
+          project)
+        </p>
+      </a>
+    </div>
+  </div>
+  <!-- course card ended -->
+</div>
+
+{% endblock %}

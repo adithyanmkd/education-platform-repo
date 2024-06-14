@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-guyq^5(j&)zc-f-#i7&c+^l*r-i-01^7-oit+l_x-va_$3ihd$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '192.168.1.33',
+    '192.168.1.34',
+    '192.168.1.36',
+    '192.168.1.255',
+    '192.168.2.218',
+    '192.168.1.37',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -37,6 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'livereload',
+    
+    'core.apps.CoreConfig',
+    'course.apps.CourseConfig',
+    'tutorial.apps.TutorialConfig',
+    'profile_app.apps.ProfileAppConfig',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -47,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'education_platform.urls'
@@ -54,7 +72,7 @@ ROOT_URLCONF = 'education_platform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -1,0 +1,101 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <meta name="theme-color" content="#4a90e2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+</head>
+
+<body class="bg-[#0E1223] bg-gradient-to-b from-indigo-950 via-[#0E1223] via-[15%] to-[#0E1223] h-screen">
+  {% block navbar %}
+  {% include 'html/code-parts/navbar.html'%}
+  {% endblock %}
+  {% block content %}
+  <main class="bg-blue-950  flex items-center">
+    <section class="w-[70%] relative pl-8 flex justify-center">
+      <img class="w-[90%] rounded-xl opacity-70" src="{% static 'images/bg-image1.jpeg' %}" alt="" />
+      <div class="absolute top-[35%] left-[10%]">
+        <h1 class="text-4xl text-white font-black leading-normal">
+          JOIN NOW <span class="block"> START LEARNING TODAY</span>
+        </h1>
+        <button class="bg-white px-7 py-[10px] rounded-3xl font-bold mt-4 hover:bg-indigo-700 hover:text-white">
+          Sign in
+        </button>
+      </div>
+    </section>
+
+    <!-- courses section -->
+    <section class="w-[30%] h-full">
+      <div class="w-[80%] h-[20%] mt-10">
+        <h1 class="text-white text-4xl mb-[5%] font-medium">
+          Choose what to learn
+        </h1>
+        <p class="text-white text-lg font-thin mb-8">
+          Start learning the best <br />
+          Programming languages.
+        </p>
+        <div class="course-box">
+          <a class="h-full flex" href="#1">
+            <div class="w-[20%] h-full flex justify-center items-center">
+              <img class="w-[60%]" src="{% static 'icons/python-icon.svg' %}" alt="" />
+            </div>
+            <div class="w-[80%] h-full flex items-center">
+              <p class="text-lg font-thin">Python programming</p>
+            </div>
+          </a>
+        </div>
+        <div class="course-box">
+          <a class="h-full flex" href="#2">
+            <div class="w-[20%] h-full flex justify-center items-center">
+              <img class="w-[60%]" src="{% static 'icons/database-icon.png' %}" alt="" />
+            </div>
+            <div class="w-[80%] h-full flex items-center">
+              <p class="text-lg font-thin">Learn SQL</p>
+            </div>
+          </a>
+        </div>
+        <div class="course-box">
+          <a class="h-full flex" href="#1">
+            <div class="w-[20%] h-full flex justify-center items-center">
+              <img class="w-[50%]" src="{% static 'icons/javascript-icon.svg' %}" alt="" />
+            </div>
+            <div class="w-[80%] h-full flex items-center">
+              <p class="text-lg font-thin">JavaScript</p>
+            </div>
+          </a>
+        </div>
+        <div class="course-box">
+          <a class="h-full flex" href="#3">
+            <div class="w-[20%] h-full flex justify-center items-center">
+              <img class="w-[50%] h-auto mt-2" src="{% static 'icons/html5-icon.svg' %}" alt="" />
+            </div>
+            <div class="w-[80%] h-full flex items-center">
+              <p class="text-lg font-thin">Learn HTML</p>
+            </div>
+          </a>
+        </div>
+        <div class="course-box hover:h-[50%]">
+          <a class="h-full flex" href="course-page.html">
+            <div class="w-full h-full flex justify-center items-center hover:text-blue-950">
+              <p class="flex text-lg">View all courses</p>
+              <p class="text-4xl font-extrabold pl-2 pb-3">&#8594;</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- courses ended -->
+  </main>
+
+  {% endblock %}
+
+</body>
+
+</html>

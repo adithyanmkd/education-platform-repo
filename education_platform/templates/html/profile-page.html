@@ -1,0 +1,251 @@
+{% extends 'html/index.html'%}
+{% load static %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+<div class="w-screen h-screen flex">
+  <!-- side navbar -->
+  <div class="w-[19%] bg-blue-950">
+    <ul class="py-4 px-4 text-white flex flex-col items-center h-full">
+      <li class="mb-6">
+        <a href="#" class="flex px-4 py-2 rounded-lg mr-auto space-x-4 items-center justify-center">
+          <div>
+            <img class="w-6" src="{% static 'icons/paw_1.png' %}" alt="" />
+          </div>
+          <div>
+            <p class="font-black text-xl">Network</p>
+          </div>
+        </a>
+      </li>
+      <li class="w-full">
+        <a href="{% url 'index'%}"
+          class="flex bg-[#708EBE] w-full px-4 py-2 rounded-lg mr-auto space-x-4 items-center text-sm">
+          <div>
+            <img class="w-[18px]" src="{% static 'icons/home.png' %}" alt="" />
+          </div>
+          <div>
+            <p>Home</p>
+          </div>
+        </a>
+      </li>
+      <li class="w-full">
+        <a href="{% url 'course-selection'%}"
+          class="flex w-full px-4 py-2 rounded-lg mr-auto space-x-4 items-center text-sm">
+          <div>
+            <img class="w-[18px]" src="{% static 'icons/graduation-cap.png' %}" alt="" />
+          </div>
+          <div>
+            <p>Courses</p>
+          </div>
+        </a>
+      </li>
+      <li class="w-full">
+        <a href="{% url 'tutorial'%}" class="flex w-full px-4 py-2 rounded-lg mr-auto space-x-4 items-center text-sm">
+          <div>
+            <img class="w-[18px]" src="{% static 'icons/play-alt.png' %}" alt="" />
+          </div>
+          <div>
+            <p>Tutorial</p>
+          </div>
+        </a>
+      </li>
+      <li class="mt-auto mr-auto">
+        <a href="#" class="flex px-2 py-2 rounded-lg mr-auto space-x-4 items-center">
+          <div>
+            <img class="w-[18px]" src="{% static 'icons/logout.png' %}" alt="" />
+          </div>
+          <div>
+            <p>Logout</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- side navbar -->
+  <div class="w-[60%] bg-[#d4dff0]">
+    <div class="grid grid-cols-2 w-full gap-4 px-3 mt-6">
+      <div>
+        <h1 class="text-2xl font-black text-gray-900">Dashboard</h1>
+      </div>
+      <div class="flex justify-end">
+        <div
+          class="flex bg-slate-100 space-x-4 w-72 px-3 py-1 rounded-md items-center hover:outline hover:outline-1 hover:outline-gray-700">
+          <div class="cursor-pointer">
+            <img class="w-[18px]" src="{% static 'icons/search.png' %}" alt="" />
+          </div>
+          <div>
+            <input class="outline-none w-56 bg-slate-100 text-sm" type="text" name="search" id="search"
+              placeholder="Search for course.." />
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#708EBE] col-span-2 h-36 rounded-lg flex">
+        <div class="mx-4 mt-2 text-white">
+          <h1 class="font-semibold text-2xl leading-relaxed">
+            Welcome back, Amal
+          </h1>
+          <p class="text-xs leading-5 word-md font-light mb-2">
+            Your progress of this week is awesome, keep it up and let's
+            <br />
+            get more point reward
+          </p>
+          <a class="px-2 py-[6px] text-xs border bg-white text-black rounded-lg" href="course-page.html">
+            View course
+          </a>
+        </div>
+        <div class="ml-auto mr-10">
+          <img class="w-56" src="{% static 'images/illustrations/Learning-cuate-cropped.svg' %}" alt="" />
+        </div>
+      </div>
+      <!-- course cards -->
+      <div class="col-span-2 rounded-md">
+        <div class="flex items-center">
+          <h1 class="text-xl font-semibold">Continue learning</h1>
+          <a class="ml-auto text-sm underline" href="course-page.html">View all</a>
+        </div>
+
+        <div class="">
+          <div class="flex space-x-10 space-y-4 justify-center">
+            <div
+              class="flex flex-col space-y-3 h-60 w-52 ml-4 mt-4 py-3 pt-3 px-2 items-center bg-white rounded-md cursor-pointer hover:outline hover:outline-1 hover:outline-[#708EBE]">
+              <div class="rounded-md bg-violet-300">
+                <div class="relative w-44 h-40">
+                  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <img class="w-20" src="{% static 'icons/figma-logo.svg' %}" alt="" />
+                  </div>
+                  <div class="absolute right-0 bottom-0 mr-2 mb-2">
+                    <div class="bg-white size-8 grid place-content-center rounded-full">
+                      <img class="size-6" src="{% static 'icons/play-icon.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-col">
+                <h1 class="font-semibold">Figma UI design course</h1>
+                <div class="w-full flex items-center">
+                  <div class="h-1 bg-gray-400 rounded-lg mt-2 w-[85%] flex">
+                    <div class="h-1 bg-black rounded-lg w-2/3"></div>
+                  </div>
+                  <div>
+                    <p class="text-xs mt-2 ml-2 text-gray-600">78%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col space-y-3 h-60 w-52 ml-4 mt-4 py-3 pt-3 px-2 items-center bg-white rounded-md cursor-pointer hover:outline hover:outline-1 hover:outline-[#708EBE]">
+              <div class="rounded-md bg-violet-300">
+                <div class="relative w-44 h-40">
+                  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <img class="w-20" src="{% static 'icons/figma-logo.svg' %}" alt="" />
+                  </div>
+                  <div class="absolute right-0 bottom-0 mr-2 mb-2">
+                    <div class="bg-white size-8 grid place-content-center rounded-full">
+                      <img class="size-6" src="{% static 'icons/play-icon.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-col">
+                <h1 class="font-semibold">Figma UI design course</h1>
+                <div class="w-full flex items-center">
+                  <div class="h-1 bg-gray-400 rounded-lg mt-2 w-[85%] flex">
+                    <div class="h-1 bg-black rounded-lg w-2/3"></div>
+                  </div>
+                  <div>
+                    <p class="text-xs mt-2 ml-2 text-gray-600">78%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col space-y-3 h-60 w-52 ml-4 mt-4 py-3 pt-3 px-2 items-center bg-white rounded-md cursor-pointer hover:outline hover:outline-1 hover:outline-[#708EBE]">
+              <div class="rounded-md bg-violet-300">
+                <div class="relative w-44 h-40">
+                  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <img class="w-20" src="{% static 'icons/figma-logo.svg' %}" alt="" />
+                  </div>
+                  <div class="absolute right-0 bottom-0 mr-2 mb-2">
+                    <div class="bg-white size-8 grid place-content-center rounded-full">
+                      <img class="size-6" src="{% static 'icons/play-icon.png' %}" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full flex flex-col">
+                <h1 class="font-semibold">Figma UI design course</h1>
+                <div class="w-full flex items-center">
+                  <div class="h-1 bg-gray-400 rounded-lg mt-2 w-[85%] flex">
+                    <div class="h-1 bg-black rounded-lg w-2/3"></div>
+                  </div>
+                  <div>
+                    <p class="text-xs mt-2 ml-2 text-gray-600">78%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-[21%] px-6 py-6">
+    <h3 class="font-semibold text-lg text-gray-900">Your profile</h3>
+    <div class="flex justify-center">
+      <div class="size-48 grid place-content-center">
+        <img class="w-24 rounded-full outline outline-offset-4 outline-[#708EBE]"
+          src="{% static 'images/illustrations/avatar.jpg' %}" alt="" />
+        <h3 class="mx-auto mt-3 font-semibold text-gray-900">Amal</h3>
+        <a class="text-xs hover:underline hover:underline-offset-4 mx-auto text-gray-600" href="#">Edit profile</a>
+      </div>
+    </div>
+    <div class="h-96 space-y-3">
+      <div class="flex">
+        <h2 class="text-lg font-semibold text-gray-900">Code bits</h2>
+        <a class="ml-auto text-sm text-gray-600 hover:underline hover:underline-offset-4" href="#">Manage</a>
+      </div>
+      <!-- works cards -->
+      <div class="rounded-lg work-card">
+        <div class="size-16 rounded-lg bg-[#708EBE] grid place-content-center">
+          <p class="font-black text-white">WEB</p>
+        </div>
+        <div>
+          <p class="font-medium text-nowrap">star pattern program</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="size-16 rounded-lg bg-[#708EBE] grid place-content-center">
+          <p class="font-black text-white">WEB</p>
+        </div>
+        <div>
+          <p class="font-medium text-nowrap">star pattern program</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="size-16 rounded-lg bg-[#708EBE] grid place-content-center">
+          <p class="font-black text-white">WEB</p>
+        </div>
+        <div>
+          <p class="font-medium text-nowrap">star pattern program</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="size-16 rounded-lg bg-[#708EBE] grid place-content-center">
+          <p class="font-black text-white">WEB</p>
+        </div>
+        <div>
+          <p class="font-medium text-nowrap">star pattern program</p>
+        </div>
+      </div>
+      <!-- works card ended -->
+      <a class="w-full h-8 border border-blue-950 rounded-md flex justify-center items-center hover:bg-[#e4eaf3]"
+        href="#">
+        <p class="font-bold text-blue-950">Add New</p>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

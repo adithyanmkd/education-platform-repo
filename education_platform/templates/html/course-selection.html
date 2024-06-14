@@ -1,0 +1,191 @@
+{% extends 'html/index.html'%}
+{% load static %}
+{% block content %}
+<div class="min-h-screen flex justify-center bg-gray-200">
+  <!-- filter section started -->
+
+  <div class="ml-auto flex flex-col mt-20">
+    <div class="border border-gray-500 rounded-md bg-white shadow-lg">
+      <div class="border border-transparent border-b-gray-500">
+        <ul class="leading-8 p-5">
+          <li>
+            <a class="filter-font" href="#">Browse Popular Coding Courses</a>
+          </li>
+          <li><a class="filter-font" href="#">All Courses(21)</a></li>
+          <li><a class="filter-font" href="#">Learning Paths(5)</a></li>
+          <li><a class="filter-font" href="#">New Courses(3)</a></li>
+        </ul>
+      </div>
+      <div class="">
+        <ul class="leading-8 p-5">
+          <li class="font-bold">Browse by Languages</li>
+          <li><a class="filter-font" href="#">Python</a></li>
+          <li><a class="filter-font" href="#">C++</a></li>
+          <li><a class="filter-font" href="#">C</a></li>
+          <li><a class="filter-font" href="#">Java</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- filter section ended -->
+
+  <!-- course cards  -->
+
+  <div class="flex-1 max-w-4xl mt-20">
+    <div class="flex flex-col">
+      <div class="grid pb-8 place-items-center lg:place-self-start lg:pl-10">
+        <h1 class="font-bold text-xl">Popular Coding Courses</h1>
+      </div>
+      <div>
+        <ul class="flex flex-wrap justify-center gap-6 max-w-2xl">
+          <li class="course-page-card">
+            <a href="{% url 'course-overview'%}">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="#">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="#">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="#">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="#">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <a href="#">
+              <div class="h-64 mx-4">
+                <div class="h-32">
+                  <img class="h-32" src="{% static 'icons/python.png' %}" alt="" />
+                </div>
+                <div class="h-32 max-w-52">
+                  <h1 class="text-lg font-bold text-[#25265e] mb-3">
+                    Become a <br />
+                    Python Master
+                  </h1>
+                  <p class="text-sm text-gray-600">
+                    337+ Courses <br />
+                    Bigginer Course
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="course-page-card">
+            <div class="h-64"></div>
+          </li>
+          <li class="course-page-card">
+            <div class="h-64"></div>
+          </li>
+          <li class="course-page-card">
+            <div class="h-64"></div>
+          </li>
+          <li class="course-page-card">
+            <div class="h-64"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- course card ended -->
+</div>
+{% endblock %}
